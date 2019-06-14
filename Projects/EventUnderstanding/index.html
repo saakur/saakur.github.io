@@ -1,0 +1,202 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Understanding</title>
+   <link rel="stylesheet" type="text/css" href="files/style.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+
+<body onload="page_loaded()">
+
+<div id="header">
+  <a href="http://marathon.csee.usf.edu/">
+    <img src="files/images/GroupLogo.png" style="width:200px; float: left; margin-left: 20px; margin-top: 20px;">
+  </a>
+  <a href="http://www.usf.edu/">
+    <img src="files/images/USF.jpg" style="height:50px; float: right; margin-right: 20px; ">
+  </a>
+  <center><h1>Event Understanding</h1></center>
+
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+  <div class="container sec">
+    <h2>Summary</h2>
+    Video data captures a tremendous amount of data that encompasses both visual and semantic knowledge. Traditional approaches to video activity understanding is based on training machine learning models or, more recently, a variety of deep learning approaches to capture underlying semantics of the video using human-annotated training data. However, this restricts the trained models to the ontology given by the annotations. A deeper understanding of video activities extends beyond recognition of underlying concepts such as actions and objects: constructing deep semantic representations requires reasoning about the semantic relationships among these concepts, often beyond what is directly observed in the data. 
+    We propose an energy minimization framework that leverages large-scale commonsense knowledge bases, such as <a href="http://conceptnet5.media.mit.edu/"><i>ConceptNet</i></a>, to provide contextual cues to establish semantic relationships among entities directly hypothesized from video signal. We mathematically express this using the language of Grenander's canonical pattern generator theory. 
+    We show that the use of prior encoded commonsense knowledge alleviate the need for large annotated training datasets and help tackle imbalance in training through prior knowledge. Through extensive experiments, we show that the use of commonsense knowledge from ConceptNet allows the proposed approach to handle various challenges such as training data imbalance, weak features, and complex semantic relationships and visual scenes.
+    We also find that the use of commonsense knowledge allows for highly interpretable models that can be used in a dialog model for better human-machine interaction.
+  </div>
+</div>
+<div class="sechighlight">
+  <div class="container sec">
+    <h2>People</h2>
+    <ul>
+      <li><b><i><a href="http://www.cse.usf.edu/~sarkar/SudeepSarkar/About_Me.html"> Dr. Sudeep Sarkar</a></i></b>, Professor and Chairperson, Department of Computer Science and Engineering, USF</li>
+      <li><b><i><a href="http://www.eng.usf.edu/~fillipe/index.html"> Fillipe DM de Souza</a></i></b>, PhD Candidate, Department of Computer Science and Engineering, USF <i>(Now: Computer Vision Research Engineer at Intel)</i></li>
+      <li><b><i><a href="http://www.eng.usf.edu/~saakur/index.html"> Sathyanarayanan N. Aakur</a></i></b>, PhD Candidate, Department of Computer Science and Engineering, USF</li>
+      <li><b><i><a href="http://www.eng.usf.edu/~danielsawyer/index.html"> Daniel Sawyer</a></i></b>, PhD Student, Department of Computer Science and Engineering, USF</li>
+
+    </ul>
+  </div>
+</div>
+<div class="container sec">
+  <h2>Example</h2>
+<table align=center>
+
+  <tr>
+    <td>
+      <center><h4>Groundtruth</h4></center>
+    </td>
+    <td></td>
+    <td>
+      <center><h4>Activity Interpretation</h4></center>
+    </td>
+    <td>
+      <center><h4>Groundtruth</h4></center>
+    </td>
+    <td></td>
+    <td>
+      <center><h4>Activity Interpretation</h4></center>
+    </td>
+    
+
+  </tr>
+
+
+  <tr>
+    <td>
+      <video width="280" height="210" controls>
+          <source src="files/wacv_files/videos/Watch_laptop.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <center><h5>Watch Laptop</h5></center>
+    </td>
+    <td></td>
+    <td>
+      <img style="border: 0px solid ; height: 210px" alt="" src="files/wacv_files/interpretations/Contextualization/watch_laptop.jpg">
+      <center><h5>Watch Laptop</h5></center>
+    </td>
+    <td>
+      <video width="280" height="210" controls>
+          <source src="files/wacv_files/videos/vid1338_x264.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <center><h5>A person is playing a guitar.</h5></center>
+    </td>
+    <td></td>
+    <td>
+      <img style="border: 0px solid ; height: 210px" alt="" src="files/wacv_files/interpretations/Contextualization/person_play_guitar.png">
+      <center><h5>A person is playing a guitar.</h5></center>
+    </td>
+  </tr>
+
+</table>
+</div>
+  <div class="container sec">
+    <div id="coursedesc">
+    <h2>Papers Published</h2>
+        <p>
+              </p><ul>
+      <li>
+                        <p><b> A Perceptual Prediction Framework for Self Supervised Event Segmentation</b><br>
+                        Sathyanarayanan Aakur, Sudeep Sarkar<br>
+                        <i>Arxiv, 2018</i>, 1811.04869.
+      <b><i>  </i></b> <a href="https://arxiv.org/pdf/1811.04869.pdf">[pdf]</a><br>
+                        </p>
+                  </li>
+      <li>
+                        <p><b> Fine-grained Action Detection in Long Surveillance Videos</b><br>
+                        Sathyanarayanan Aakur, Daniel Sawyer, Sudeep Sarkar<br>
+                        <i>Workshop on Human Activity Detection in Multi-Camera, Continuous, Long-Duration Video (HADCV'19), Winter Conference on Applications of Computer Vision (WACV), Waikoloa Village, Hawaii</i> <a href="#files/"></a>[pdf](Coming Soon!)
+                        </p>
+                  </li>
+      <li>
+                        <p><b>Going Deeper with Semantics: Exploiting Semantic Contextualization for Interpretation of Human Activity in Videos</b><br>
+                        Sathyanarayanan Aakur, Fillipe DM de Souza, Sudeep Sarkar<br>
+                        <i>Winter Conference on Applications of Computer Vision (WACV), Waikoloa Village, Hawaii</i> <a href="https://arxiv.org/abs/1708.03725">[pdf]</a><br>
+                        </p>
+                  </li>
+
+      <li>
+                        <p><b>Generating Open World Descriptions of Video using Commonsense Knowledge in a Pattern Theory Framework</b><br>
+                        Sathyanarayanan Aakur, Fillipe DM de Souza, Sudeep Sarkar<br>
+                        <i>Quarterly of Applied Mathematics</i>, 2019
+                        <a href="https://www.ams.org/journals/qam/0000-000-00/S0033-569X-2019-01530-5/">[pdf]</a><br>
+                        </p>
+                  </li>
+      <li>
+                        <p><b>On the Inherent Explainability of Pattern Theory-based Video Event Interpretations</b><br>
+                        Sathyanarayanan Aakur, Fillipe de Souza, Sudeep Sarkar<br>
+                        Book Chapter, <i>Explainable and Interpretable Models in Computer Vision and Machine Learning in the Springer Series on Challenges in Machine Learning</i>, 2019
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-98131-4_11">[pdf]</a><br>
+                        </p>
+                  </li>
+
+      <li>
+
+                        <p><b>An Inherently Explainable Model for Video Activity Interpretation</b><br>
+                        Sathyanarayanan Aakur, Fillipe DM de Souza, Sudeep Sarkar<br>
+                        <i>AAAI Workshop On Reasoning and Learning for Human-Machine Dialogues (DEEP-DIAL18)</i>, February 2018.
+                        <a href="https://aaai.org/ocs/index.php/WS/AAAIW18/paper/view/16704">[pdf]</a><br>
+                        </p>
+                  </li>
+
+      <li>
+                  <p><b>Towards a Knowledge-based approach for Generating Video Descriptions</b><br>
+                  Sathyanarayanan Aakur, Fillipe DM de Souza, Sudeep Sarkar<br>
+                  In Proceedings of the <i>Conference on Computer and Robot Vision</i>, Edmonton, Alberta, Canada, May 2017.
+                  <a href="files/Saakur_CRV17.pdf">[pdf]</a><br>
+                  </p>
+      </li> 
+      <li>
+                  <p><b>Spatially coherent interpretations of videos using pattern theory</b><br>
+                  Fillipe DM de Souza, Sudeep Sarkar, Anuj Srivatsava, Jingyong Su<br>
+                  In Proceedings of the <i>International Journal of Computer Vision (IJCV)</i>, 2017.
+                  <a href="https://link.springer.com/article/10.1007/s11263-016-0913-6">[pdf]</a><br>
+                  </p>
+
+      </li>
+      <li>
+                  <p><b>Building semantic understanding beyond deep learning from sound and vision</b><br>
+                  Fillipe DM de Souza, Sudeep Sarkar, Anuj Srivatsava, Jingyong Su<br>
+                  In Proceedings of the <i>International Conference on Pattern Recognition (ICPR)</i>, 2016.
+                  <a href="files/Papers/ICPR2016.pdf">[pdf]</a><br>
+                  </p>
+
+      </li>
+      
+      <li>
+                  <p><b>Temporally Coherent Interpretations for Long Videos Using Pattern Theory</b><br>
+                  Fillipe DM de Souza, Sudeep Sarkar, Anuj Srivatsava, Jingyong Su<br>
+                  In Proceedings of the <i>Conference on Pattern Recognition and Computer Vision (CVPR)</i>, 2015.
+                  <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Souza_Temporally_Coherent_Interpretations_2015_CVPR_paper.pdf">[pdf]</a><br>
+                  </p>
+
+      </li>
+      <li>
+                  <p><b>Pattern Theory-Based Interpretation of Activities</b><br>
+                  Fillipe DM de Souza, Sudeep Sarkar, Anuj Srivatsava, Jingyong Su<br>
+                  In Proceedings of the <i>International Conference on Pattern Recognition (ICPR)</i>, 2014.
+                  <a href="files/Papers/ICPR2014.pdf">[pdf]</a><br>
+                  </p>
+
+      </li>
+    </ul>
+    </div>
+  </div>
+
+<div class="sechighlight">
+<div id="footer">
+This research was partially supported by the National Science Foundation (NSF) but this article solely reflects the opinions and conclusions of its authors and not NSF or any other entity. NSF Grants: CNS1513126, IIS1217676
+</div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body><div></div></html>
