@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="keywords" content="unsupervised gaze prediction, event segmentation, pattern theory, egocentric perception">
+
+  <link rel="shortcut icon" href="/static/img/ico/favicon.png">
+
+
+
+  <title>Unsupervised Gaze Prediction in Egocentric Videos by Energy-based Surprise Modeling</title>
+  <meta name="description" content="Unsupervised Gaze Prediction in Egocentric Videos by Energy-based Surprise Modeling---">
+
+    <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.2f91a3.css" media="screen,projection">
+</head>
+
+  <body>
+
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Unsupervised Gaze Prediction in Egocentric Videos by Energy-based Surprise Modeling</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="https://saakur.github.io/">
+            <img style="height:20px;width:45px" src="./files/OSU.jpg">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.eng.usf.edu/cvprg/">
+            <img style="height:20px;width: 45px" src="./files/USF.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="page-content">
+          <p><br /></p>
+<div class="row">
+  <center><h2>Energy-based Surpise Modeling using Pattern Theory</h2></center>
+  <br />
+  <div class="col-xs-12">
+    <img src="./files/ICIP_Arch.png" />
+  </div>
+  <div class="col-xs-12">
+    <br />
+    <p>
+      Egocentric perception has grown rapidly with the advent of immersive computing devices. Human gaze prediction is an important problem in analyzing egocentric videos and has largely been tackled through either saliency-based modeling or highly supervised learning. In this work, we tackle the problem of jointly predicting human gaze points and temporal segmentation of egocentric videos, in an unsupervised manner without using any training data. We introduce an \textit{unsupervised} computational model that draws inspiration from cognitive psychology models of human attention and event perception. We use Grenander's pattern theory formalism to represent spatial-temporal features and model \textit{surprise} as a mechanism to predict gaze fixation points and temporally segment egocentric videos. Extensive evaluation on two publicly available datasets - GTEA and GTEA+ datasets show that the proposed model is able to outperform all unsupervised baselines and some supervised gaze prediction baselines. Finally, we show that the model can also temporally segment egocentric videos with a performance comparable to more complex, fully supervised deep learning baselines.
+    </p>
+  </div>
+  
+<hr />
+
+
+<hr />
+
+<div class="row">
+  <center><h2>Gaze Prediction Results</h2></center>
+  <br />
+  <div class="col-xs-12">
+    <br />
+    <p>
+      The predicted gaze point is illustrated as a gaze hatmap and the groundtruth gaze point is illustrated as the red point.
+    </p>
+  </div>
+    <div class="col-xs-3">
+          <img class="thumb" src="./files/1.gif" />
+    </div>
+    <div class="col-xs-3">
+          <img class="thumb" src="./files/2.gif" />
+    </div>
+    <div class="col-xs-3">
+          <img class="thumb" src="./files/3.gif" />
+    </div>
+    <div class="col-xs-3">
+          <img class="thumb" src="./files/4.gif" />
+    </div>
+</div>
+
+
+<div class="row">
+  <center><h2>Event Segmentation Results</h2></center>
+  <br />
+  <div class="col-xs-12">
+    <br />
+    <p>
+      Left shows the segmentation prediction from the pattern theory framework in a streaming fashion. The top Gantt chart shows the groundtruth values and the bottom Gantt chart shows the predicted values. On the right, we present the quantitative evaluation on the GTEA dataset. The metric used is accuracy obtained after Hungarian matching.
+    </p>
+  </div>
+
+    <div class="col-xs-6">
+          <!-- <video width="600" height="640" controls>
+            <source src="./files/Segmentation_Output1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video> -->
+      <iframe width="480" height="400" src="https://www.youtube.com/embed/if_hatO1CPw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-5">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Supervision</th>
+            <th>Approach</th>
+            <th>Accuracy</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <td>Full</td>
+            <td>Spatial-CNN</td>
+            <td>54.1%</td>
+          </tr>
+          <tr>
+            <td>Full</td>
+            <td>Bi-LSTM</td>
+            <td>55.5%</td>
+          </tr>
+          <tr>
+            <td>Full</td>
+            <td>Dilated TCN</td>
+            <td>58.3%</td>
+          </tr>
+          <tr>
+            <td>Full</td>
+            <td>ST-CNN</td>
+            <td>60.6%</td>
+          </tr>
+          <tr>
+            <td>Full</td>
+            <td>TCN</td>
+            <td>64.1%</td>
+          </tr>
+          <tr>
+            <td>Full</td>
+            <td>EgoNet + TDD</td>
+            <td>64.4%</td>
+          </tr>
+          <tr>
+            <td>None</td>
+            <td>Our Approach</td>
+            <td>57.9%</td>
+          </tr>
+        </tbody>
+    </table>
+      
+    </div>    
+</div>
+
+<p><br /></p>
+
+
+      </div>
+    </div>
+
+    
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
