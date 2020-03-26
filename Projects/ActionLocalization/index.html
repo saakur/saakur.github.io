@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="keywords" content="action localization, self supervised learning, attention, unsupervised gaze prediction">
+
+  <link rel="shortcut icon" href="/static/img/ico/favicon.png">
+
+
+
+  <title>Action Localization through Continual Predictive Learning</title>
+  <meta name="description" content="Action Localization through Continual Predictive Learning---">
+
+    <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.2f91a3.css" media="screen,projection">
+</head>
+
+  <body>
+
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Action Localization through Continual Predictive Learning</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="https://saakur.github.io/">
+            <img style="height:20px;width:45px" src="./files/OSU.jpg">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.eng.usf.edu/cvprg/">
+            <img style="height:20px;width: 45px" src="./files/USF.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="page-content">
+          <p><br /></p>
+<div class="row">
+  <center><h2>Action Localization through Continual Predictive Learning</h2></center>
+  <br />
+  <div class="col-xs-12">
+    <img src="./files/ECCV_Arch.png" />
+  </div>
+  <div class="col-xs-12">
+    <br />
+    <p>
+      The problem of action recognition involves locating the action in the video, both over time and spatially in the image. The dominant current approaches use supervised learning to solve this problem, and require large amounts of annotated training data, in the form of frame-level bounding box annotations around the region of interest. In this paper, we present a new approach based on continual learning that uses feature-level predictions for self-supervision. It does not require any training annotations in terms of frame-level bounding boxes. The approach is inspired by cognitive models of visual event perception that propose a prediction-based approach to event understanding. We use a stack of LSTMs coupled with CNN encoder, along with novel attention mechanisms, to model the events in the video and use this model to predict high-level features for the future frames. The prediction errors are used to continuously learn the parameters of the models.  This self-supervised framework is not complicated as other approaches but is very effective in learning robust visual representations for both labeling and localization. It should be noted that the approach outputs in a streaming fashion, requiring only a single pass through the video, making it amenable for real-time processing. We demonstrate this on three datasets - UCF Sports, JHMDB, and THUMOS'13 and show that the proposed approach outperforms weakly-supervised and unsupervised baselines and obtains competitive performance compared to fully supervised baselines. Finally, we show that the proposed framework can generalize to egocentric videos and obtain state-of-the-art results in unsupervised gaze prediction. 
+    </p>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <center><h1>Action Localization Results</h1></center>
+  <hr />
+  <div class="col-xs-12">
+    <p>
+      We present additional qualitative results for all three datasets - UCF Sports, JHMDB, and THUMOS'13. We show both our best case and worst case results. Each illustration (GIF) shows the predictions for each input video from each dataset. Below each illustration is the class and the average IoU (across the entire video) of the predictions. The worst case performance in each dataset is shown in the last column of their respective rows.
+      <br> <br>
+      <font color="red"><b>Ground truth</b></font> bounding box is illustrated in <font color="red"><b>red</b></font>, the <font color="blue"><b>best prediction</b></font> is illustrated in <font color="blue"><b>blue</b></font> and <font color="green"><b>other proposals</b></font> are illustrated in <font color="green"><b>green</b></font>. The attention point is illustrated in solid blue rectangle. 
+    </p>
+  </div>
+  <center><h2>UCF Sports</h2></center>
+    <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/SkateBoarding-Front_003.gif" /> <br>
+          Skateboard <br> Av. IoU: 0.788786
+      </center>
+    </div>
+    <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/Swing-Bench_004.gif" /> <br>
+          Swing Bench <br> Av. IoU: 0.762009
+      </center>
+    </div>
+    <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/Golf-Swing-Front_001.gif" /> <br>
+          Golf Swing <br> Av. IoU: 0.676564
+      </center>
+    </div>
+    <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/Walk-Front_004.gif" /> <br>
+          Walk <br> Av. IoU: 0.618025
+      </center>
+    </div>
+    <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/Riding-Horse_003.gif" /> <br>
+          Riding Horse <br> Av. IoU: 0.676564
+      </center>
+    </div>
+    <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/Diving-Side_004.gif" /> <br>
+          Diving <br> Av. IoU: 0.345489
+      </center>
+    </div>
+</div>
+<p><br /></p>
+<hr />
+<div class="row">
+<center><h2>JHMDB</h2></center>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/brush_hair_Brushing_Hair_with_Beth_brush_hair_u_nm_np1_fr_goo_1.gif" /> <br>
+          Brush Hair <br> Av. IoU: 0.777907
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/clap_The_Slow_Clap_clap_u_nm_np1_fr_bad_20.gif" /> <br>
+          Clap <br> Av. IoU: 0.747944
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/pour_Basic_Vodka_Recipes_-_How_to_Make_a_Shirley_Temple_pour_u_cm_np1_fr_med_1.gif" /> <br>
+          Pour <br> Av. IoU: 0.730603
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/walk_AmericanGangster_walk_f_nm_np1_fr_med_38.gif" /> <br>
+          Walk <br> Av. IoU: 0.676026
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/pullup_20_good_form_pullups_pullup_f_nm_np1_ri_goo_0.gif" /> <br>
+          Pull up <br> Av. IoU: 0.634874
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/run_American_History_X_run_f_cm_np1_le_med_17.gif" /> <br>
+          Run <br> Av. IoU: 0.260543
+      </center>
+  </div>
+</div>
+<p><br /></p>
+<hr />
+<div class="row">
+<center><h2>THUMOS'13</h2></center>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/v_RopeClimbing_g02_c03.gif" /> <br>
+          Rope Climbing <br> Av. IoU: 0.75471
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/v_IceDancing_g01_c06.gif" /> <br>
+          Ice Dancing <br> Av. IoU: 0.678295
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/v_CricketBowling_g06_c04.gif" /> <br>
+          Cricket Bowling <br> Av. IoU: 0.613127
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/v_SalsaSpin_g01_c01.gif" /> <br>
+          Salsa Spin <br> Av. IoU: 0.562
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/v_WalkingWithDog_g04_c03.gif" /> <br>
+          Run <br> Av. IoU: 0.250803
+      </center>
+  </div>
+  <div class="col-xs-2">
+      <center>
+          <img class="thumb" src="./files/v_BasketballDunk_g07_c04.gif" /> <br>
+          Pull up <br> Av. IoU: 0.07861
+      </center>
+  </div>
+</div>  
+<p><br /></p>
+<hr />
+<center><h1>Additional Qualitative Analysis</h1></center>
+<hr />
+We also present additional qualitative analysis of the proposed approach. We analyze the class-wise AUC and Recall for each dataset. This is similar to the plots shown in Figure 3 (a-b) in the main paper.
+<p><br /></p>
+<div class="row">
+<center><h2>Class-wise AUC for THUMOS'13</h2></center>
+  <div class="col-xs-12">
+      <center>
+          <img class="thumb" src="./files/THUMOS_Class_AUC.png"/> <br>
+          <!-- <h2></h2><b>Class-wise AUC for THUMOS'13</b></center> -->
+      </center>
+  </div>
+</div>
+<p><br /></p>
+<div class="row">
+<center><h2>Class-wise Recall for THUMOS'13</h2></center>
+  <div class="col-xs-12">
+      <center>
+          <img class="thumb" src="./files/THUMOS_Class_Recall.png"/> <br>
+          <!-- <h2></h2><b>Class-wise Recall for THUMOS'13</b></center> -->
+      </center>
+  </div>
+</div>  
+<p><br /></p>
+<div class="row">
+<center><h2>Class-wise AUC for JHMDB</h2></center>
+  <div class="col-xs-12">
+      <center>
+          <img class="thumb" src="./files/JHMDB_Class_AUC.png"/> <br>
+          <!-- <h2></h2><b>Class-wise AUC for THUMOS'13</b></center> -->
+      </center>
+  </div>
+</div>
+<p><br /></p>
+<div class="row">
+<center><h2>Class-wise Recall for JHMDB</h2></center>
+  <div class="col-xs-12">
+      <center>
+          <img class="thumb" src="./files/JHMDB_Class_Recall.png"/> <br>
+          <!-- <h2></h2><b>Class-wise Recall for THUMOS'13</b></center> -->
+      </center>
+  </div>
+</div>  
+<p><br /></p>
+<hr />
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+
+    <div class="col-md-5">
+      <h2>Code, Paper and Extras</h2>
+      <ul>
+        <li>Find training/evaluation code <a href="#"><b>here</b></a></li> 
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+    </div>
+
+    <p><br /></p>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
