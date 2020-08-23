@@ -189,3 +189,108 @@ dd {
   /*margin-left: 180px;*/
     margin-left: 105px;
 }
+
+
+.person img{
+  display: block;
+  width: 140px;
+  margin: 5px auto;
+  height: auto;
+}
+
+.project img{
+  display: block;
+  width: 480px;
+  /*width: auto;*/
+  /*margin: 5px auto;*/
+  /*height: auto;*/
+  height: 180px;
+}
+
+.person{
+  width: 49%; 
+}
+
+
+@media screen and (min-width: 567px) {
+  .person{
+    width: 32%;
+  }
+  .artthumb{
+    width: 32%;
+  }
+  .artpiece{
+   width: 23%; 
+  }
+  .artpiece_with_disc{
+   width: 23%; 
+  }
+  .project {
+    width:50%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .person {
+    width: 24%;
+  }
+  .artthumb {
+    width: 24%;
+  }
+  .artpiece {
+    width: 23%;
+  }
+  .artpiece_with_disc {
+    width: 23%;
+  }
+  .project {
+    width:50%;
+  }
+  .photo {
+    width: 24%;
+  }
+  .flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center */
+  }
+  .flex{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    flex-direction: space-between; 
+  }
+}
+@media screen and (min-width: 992px) {
+  .person {
+    width: 19%;
+  }
+  .artthumb {
+    width: 19%;
+  }
+  .artpiece {
+    width: 23%;
+  }
+  .artpiece_with_disc {
+    width: 23%;
+  }
+  .project {
+    width:50%;
+  }
+}
+
+.people{
+  display: flex;
+  flex-flow: row wrap; 
+  /*justify-content: space-between;*/
+}
+
+.people p{
+  text-align: center;
+}
+.project p{
+  text-align: center;
+}
+.artpiece p{
+  text-align: center;
+}
