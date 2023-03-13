@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="keywords" content="Iterative Scene Graph Generation with Generative Transformers">
+
+  <link rel="shortcut icon" href="/static/img/ico/favicon.png">
+
+
+
+  <title>Iterative Scene Graph Generation with Generative Transformers</title>
+  <meta name="description" content="Learning Actor-centered Representations for Unsupervised Action Localization using Predictive Learning---">
+
+    <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.2f91a3.css" media="screen,projection">
+</head>
+
+  <body>
+
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Iterative Scene Graph Generation with Generative Transformers</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="https://saakur.github.io/">
+            <img style="height:30px;width:65px" src="./img/OSU.jpg">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="page-content">
+          <p><br /></p>
+<div class="row">
+  <center><h2>Iterative Scene Graph Generation with Generative Transformers</h2></center>
+  <br />
+  <center><h3>Sanjoy Kundu and Sathyanarayanan Aakur</h3></center>
+  <br />
+  <center><h3>Oklahoma State University</h3></center>
+  <br />
+	<div class="col-xs-12">
+    <img src="./img/Arch.png" />
+  </div>  
+  <div class="col-xs-12">
+    <br />
+    <p>
+      Scene graphs provide a rich, structured representation of a scene by encoding the entities (objects) and their spatial relationships in a graphical format. This representation has proven useful in several tasks, such as question answering, captioning, and even object detection, to name a few. Current approaches take a generation-by-classification approach where the scene graph is generated through labeling of all possible edges between objects in a scene, which adds computational overhead to the approach. This work introduces a generative transformer-based approach to generating scene graphs beyond link prediction. Using two transformer-based components, we first sample a possible scene graph structure from detected objects and their visual features. We then perform predicate classification on the sampled edges to generate the final scene graph. This approach allows us to efficiently generate scene graphs from images with minimal inference overhead. Extensive experiments on the Visual Genome dataset demonstrate the efficiency of the proposed approach. Without bells and whistles, we obtain, on average, 20.7% mean recall (mR@100) across different settings for scene graph generation (SGG), outperforming state-of-the-art SGG approaches while offering competitive performance to unbiased SGG approaches. 
+
+    </p>
+  </div>
+
+</div>
+<hr />
+<div class="row">
+	<div class="col-xs-12">
+		<center><h1>Video Walkthrough</h1></center>
+		<hr />
+	<video width="960" height="540" autoplay controls>
+	  <source src="./img/167_Supplementary_Video.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+  </div>
+
+  </div>
+<hr />
+
+
+<hr />
+<div class="row">
+  <center><h1>Qualitative Visualizations</h1></center>
+  <hr />
+  <div class="col-xs-12">
+    <p>
+      We present additional qualitative results for all three tasks - PredCls, SGCls and SGDet. 
+      In PredCls, the goal is to generate the scene graph, given ground truth entities and localization. In SGCls, the goal is to generate the scene graph, given only entity localization. In SGDet, only the input image is provided, and the goal is to generate the scene graph along with the entity localization. Edges (predicates) in <b><span style="color:red;">red</span></b> are <b><i>correctly identified</i> <span style="color:red;">zero-shot relationships</span> </b> i.e., the subject-predicate-object triplet does not exist in the training data set. Note that the SGDet results are made from object detection bounding box proposals while the other two are from groundtruth bounding boxes as outlined above.
+
+    </p>
+  </div>
+  
+  <center><h2>Example 1</h2></center>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im398_bb.png" /> <br>
+          Input Image with Groundtruth Bounding Boxes
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im398_PredCls.png" /> <br>
+          Predicted Scene Graph under the PredCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im398_SGCls.png" /> <br>
+          Predicted Scene Graph under the SGCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im398_SGDet.png" /> <br>
+          Predicted Scene Graph under the SGDet setting
+      </center>
+    </div>
+    
+</div>
+
+<br/>
+
+<div class="row">
+<center><h2>Example 2</h2></center>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im_498268_bb.png" /> <br>
+          Input Image with Groundtruth Bounding Boxes
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im_498268_PredCls.png" /> <br>
+          Predicted Scene Graph under the PredCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im_498268_SGCls.png" /> <br>
+          Predicted Scene Graph under the SGCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im_498268_SGDet.png" /> <br>
+          Predicted Scene Graph under the SGDet setting
+      </center>
+    </div>
+    
+</div>
+
+<br/>
+
+<div class="row">
+<center><h2>Example 3</h2></center>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im534_bb.png" /> <br>
+          Input Image with Groundtruth Bounding Boxes
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im534_PredCls.png" /> <br>
+          Predicted Scene Graph under the PredCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im534_SGCls.png" /> <br>
+          Predicted Scene Graph under the SGCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im534_SGDet.png" /> <br>
+          Predicted Scene Graph under the SGDet setting
+      </center>
+    </div>
+    
+</div>
+
+<br/>
+
+<div class="row">
+<center><h2>Example 4</h2></center>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im782_bb.png" /> <br>
+          Input Image with Groundtruth Bounding Boxes
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im782_PredCls.png" /> <br>
+          Predicted Scene Graph under the PredCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im782_SGCls.png" /> <br>
+          Predicted Scene Graph under the SGCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im782_SGDet.png" /> <br>
+          Predicted Scene Graph under the SGDet setting
+      </center>
+    </div>
+    
+</div>
+<br/>
+
+<div class="row">
+<center><h2>Example 5</h2></center>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im993_bb.png" /> <br>
+          Input Image with Groundtruth Bounding Boxes
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im993_PredCls.png" /> <br>
+          Predicted Scene Graph under the PredCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im993_SGCls.png" /> <br>
+          Predicted Scene Graph under the SGCls setting
+      </center>
+    </div>
+    <div class="col-xs-3">
+      <center>
+          <img class="thumb" src="./img/im993_SGDet.png" /> <br>
+          Predicted Scene Graph under the SGDet setting
+      </center>
+    </div>
+    
+</div>
+<p><br /></p>
+<hr />
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+
+    <div class="col-md-5">
+      <h2>Code, Paper and Extras</h2>
+      <ul>
+        <li>Preprint can be found <a href="https://arxiv.org/abs/2211.16636"><b>here</b></a></li>
+        <li>Supplementary material with additional information can be found <a href="img/CVPR2023_ISGGT_Supplementary.pdf"><b>here</b></a></li>
+        <li>Find training/evaluation code <a href="#"><b>here</b> [Coming Soon!]</a></li>
+      </ul>
+    </div>
+    <div class="col-md-7">
+      <h2>Bibtex</h2>
+<pre style="font-size:12px;">
+@inproceedings{aakur2019perceptual,
+  title={Iterative Scene Graph Generation with Generative Transformers},
+  author={Kundu, Sanjoy and Aakur, Sathyanarayanan N},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2023}
+}
+
+</pre>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+    </div>
+
+    <p><br /></p>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
