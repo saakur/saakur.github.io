@@ -1,1 +1,66 @@
+body {
+    background-color:#FFFFFF  ;
+    font-size:15px;
+    margin: 0;
+}
+
+
+
+h1 {
+    color: #000000;
+    font-size: 130%;
+    font-family: Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+    border-bottom: 2px solid #5F5F5F;
+}
+
+h2 {
+    font-size: 130%;
+    color: #5F5F5F;
+    /*border-bottom: 2px solid #5F5F5F;*/
+}
+
+about {
+    /*padding:0cm 0cm 0cm 1cm;*/
+    font-family: Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+    text-align: justify;
+    font-size: 100%;
+}
+
+p {
+    font-size: 100%;
+    font-family: Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+}
+
+a {
+  color: #5F5F5F;
+  text-decoration: none;
+  /*font-weight:bold;*/
+}
+
+a:hover {
+  color: #000000;
+  text-decoration:underline;
+}
+
+table {
+    background-color:#FFFFFF ;
+    border-spacing: 10px 10px;
+    padding-top:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+name {
+    color: #000000;
+    font-family: Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+    font-size: 170%;
+    margin: 0px 0px 0px 0px;
+}
+
+contact{
+    color: #000000;
+    font-family: Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+    font-size: 100%;
+    margin: 0px 0px 0px 0px;
+}
 
